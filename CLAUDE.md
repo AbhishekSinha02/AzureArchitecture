@@ -8,7 +8,7 @@
 
 ```
 Role         : Cloud / AI / Data Architect — Senior/Lead level
-Target       : CAD $140K+, Remote/Hybrid, Canadian financial sector + enterprise
+Target       : Remote/Hybrid, Canadian financial sector + enterprise
 Stack        : Azure-first, AWS-aware, cloud-agnostic reasoning
 Core skills  : AKS, Terraform, GitHub Actions, Azure OpenAI, AI Search,
                CosmosDB, Service Bus, Event Hubs, Data Factory, Synapse,

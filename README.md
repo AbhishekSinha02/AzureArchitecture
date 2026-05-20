@@ -51,7 +51,27 @@ across every layer — for data migration, RAG, and Agentic AI at all enterprise
 
 ---
 
-### 3. [CLAUDE.md — Architect Context](./CLAUDE.md)
+### 3. [Interview Prep: 10 System Design Use Cases](./Interview-SystemDesign-10UseCases.md)
+Mentor + interviewer format covering 10 Azure system design scenarios end-to-end.  
+Each use case includes clarifying questions, architecture, key decisions with tradeoffs,  
+deep-dive probes with full technical answers, and follow-up questions.
+
+| Use Case | Core Probe Areas |
+|----------|-----------------|
+| Real-time fraud detection (bank) | Event Hubs partitioning, ML scoring, OSFI B-10, champion/challenger |
+| Multi-tenant SaaS on AKS | NetworkPolicy enforcement, Workload Identity, KEDA per-tenant scaling |
+| 500TB video migration zero-downtime | Checksum validation (SHA-256), file-in-flight problem, CDN warm-up |
+| RAG compliance chatbot | Hallucination prevention (4 layers), chunking strategy, multi-doc queries |
+| Payment API 99.99% uptime | Idempotency (3 layers), Service Bus Geo-DR, circuit breaker, chaos engineering |
+| IoT factory 1M sensors | IoT Hub vs Event Hubs decision, Edge aggregation, ADX vs InfluxDB vs TimescaleDB |
+| Data lakehouse migration | CDC with Debezium (how it actually works), Delta Lake internals, cutover playbook |
+| CI/CD for 50-team org | OIDC auth (no secrets), GitOps pull-based vs push-based, secrets without Git |
+| Black Friday 10x spike | KEDA pre-scale + cron, cache stampede / penetration / breakdown failure modes |
+| Hub-spoke + Zero Trust | Private Endpoint DNS gotcha, NSG vs Firewall decision, ExpressRoute BGP |
+
+---
+
+### 4. [CLAUDE.md — Architect Context](./CLAUDE.md)
 Living reference file used as context for AI-assisted architecture work.  
 Contains core patterns, use-case templates, troubleshooting playbooks, and interview Q&A  
 for Cloud, AI, Data, Networking, AKS, and Migration across enterprise scales.
@@ -72,7 +92,11 @@ for Cloud, AI, Data, Networking, AKS, and Migration across enterprise scales.
 | Design AI governance for a regulated project | [AI Governance framework](./UnstructuredData-Migration-RAG-AgenticAI.md#8-ai-governance-framework) |
 | Compare Azure Native vs OSS at my scale | [Decision matrix](./TechStack-Comparison-DataMigration-RAG-AgenticAI.md#11-decision-matrix--one-page-cheat-sheet) |
 | Find external docs, papers, and courses | [Further reading](./TechStack-Comparison-DataMigration-RAG-AgenticAI.md#12-further-reading--external-resources) |
-| Prepare for an architecture interview | [Interview Q&A](./UnstructuredData-Migration-RAG-AgenticAI.md#11-interview-qa-bank) |
+| Prepare for an architecture interview | [10 Use Cases deep dive](./Interview-SystemDesign-10UseCases.md) |
+| Understand how checksums work in migration | [Checksum validation](./Interview-SystemDesign-10UseCases.md#use-case-3-500tb-video-migration--zero-downtime) |
+| Understand idempotency for payments | [Idempotency deep dive](./Interview-SystemDesign-10UseCases.md#use-case-5-payment-processing-api--9999-uptime) |
+| Debug AKS networking / Private Endpoint DNS | [Zero Trust networking](./Interview-SystemDesign-10UseCases.md#use-case-10-hub-spoke-networking--zero-trust-for-enterprise) |
+| Understand how CDC works | [CDC deep dive](./Interview-SystemDesign-10UseCases.md#use-case-7-enterprise-data-lakehouse-migration) |
 
 ---
 
@@ -80,10 +104,11 @@ for Cloud, AI, Data, Networking, AKS, and Migration across enterprise scales.
 
 ```
 AzureArchitecture/
-├── README.md                                          ← this file
-├── CLAUDE.md                                          ← architect context + patterns
-├── UnstructuredData-Migration-RAG-AgenticAI.md        ← migration + RAG + Agentic AI design
-└── TechStack-Comparison-DataMigration-RAG-AgenticAI.md ← Azure Native vs OSS comparison
+├── README.md                                            ← this file
+├── CLAUDE.md                                            ← architect context + patterns
+├── UnstructuredData-Migration-RAG-AgenticAI.md          ← migration + RAG + Agentic AI design
+├── TechStack-Comparison-DataMigration-RAG-AgenticAI.md  ← Azure Native vs OSS comparison
+└── Interview-SystemDesign-10UseCases.md                 ← 10 use cases, deep-dive Q&A
 ```
 
 ---

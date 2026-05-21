@@ -91,7 +91,26 @@ Includes how-to guides for Logic Apps, ADF checksum pipelines, and networking de
 
 ---
 
-### 5. [CLAUDE.md — Architect Context](./CLAUDE.md)
+### 5. [How-To Knowledge Base](./howto/README.md)
+Short, practical, hands-on Q&A in an engaging Wikipedia-meets-practitioner style.  
+Each answer is 3–6 sentences — exactly what you'd say when an interviewer asks *"How did you actually do that?"*
+
+| File | Topic |
+|------|-------|
+| [01-governance.md](./howto/01-governance.md) | Management groups, policy, tagging, cost allocation |
+| [02-landing-zones.md](./howto/02-landing-zones.md) | CAF landing zones, platform subscriptions, vending |
+| [03-networking.md](./howto/03-networking.md) | Hub-Spoke, NSG, Private Endpoints, Front Door |
+| [04-authentication-authorization.md](./howto/04-authentication-authorization.md) | Managed Identity, RBAC, service principals |
+| [05-pim-conditional-access.md](./howto/05-pim-conditional-access.md) | PIM, Conditional Access, hybrid access |
+| [06-security-policy.md](./howto/06-security-policy.md) | Defender, Azure Policy, secrets, encryption |
+| [07-scalability.md](./howto/07-scalability.md) | Autoscale, KEDA, cache-aside, CosmosDB RU |
+| [08-high-availability.md](./howto/08-high-availability.md) | AZs, Traffic Manager, failover groups, chaos testing |
+| [09-migration.md](./howto/09-migration.md) | Azure Migrate, AzCopy, DMS, cutover, validation |
+| [10-hybrid-connectivity.md](./howto/10-hybrid-connectivity.md) | VPN, ExpressRoute, Arc, Data Box, hybrid identity |
+
+---
+
+### 6. [CLAUDE.md — Architect Context](./CLAUDE.md)
 Living reference file used as context for AI-assisted architecture work.  
 Contains core patterns, use-case templates, troubleshooting playbooks, and interview Q&A  
 for Cloud, AI, Data, Networking, AKS, and Migration across enterprise scales.
@@ -129,6 +148,9 @@ AzureArchitecture/
 ├── UnstructuredData-Migration-RAG-AgenticAI.md          ← migration + RAG + Agentic AI design
 ├── TechStack-Comparison-DataMigration-RAG-AgenticAI.md  ← Azure Native vs OSS comparison
 ├── Interview-SystemDesign-10UseCases.md                 ← 10 use cases, deep-dive Q&A
+├── howto/                                               ← hands-on how-to knowledge base
+│   ├── README.md
+│   ├── 01-governance.md ... 10-hybrid-connectivity.md
 └── interview-questions/                                 ← interview question bank (B/I/A levels)
     ├── README.md                                        ← navigation index
     ├── 01-fundamentals.md                               ← beginner: core concepts

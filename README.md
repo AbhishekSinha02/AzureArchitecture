@@ -71,7 +71,27 @@ deep-dive probes with full technical answers, and follow-up questions.
 
 ---
 
-### 4. [CLAUDE.md — Architect Context](./CLAUDE.md)
+### 4. [Interview Question Bank](./interview-questions/README.md)
+Comprehensive beginner → intermediate → advanced Q&A across all Azure domains.  
+Includes how-to guides for Logic Apps, ADF checksum pipelines, and networking deep dives.
+
+| File | Topics |
+|------|--------|
+| [01-fundamentals.md](./interview-questions/01-fundamentals.md) | Core Azure, IAM, storage, networking basics |
+| [02-migration.md](./interview-questions/02-migration.md) | 6Rs, Data Box, CDC, zero-downtime cutover |
+| [03-databases.md](./interview-questions/03-databases.md) | SQL, CosmosDB, Redis, partitioning, consistency |
+| [04-scalability.md](./interview-questions/04-scalability.md) | AKS KEDA, autoscale, caching, traffic spikes |
+| [05-disaster-recovery.md](./interview-questions/05-disaster-recovery.md) | RTO/RPO, active-active, failover, backup |
+| [06-security-zero-trust.md](./interview-questions/06-security-zero-trust.md) | Zero Trust, Private Endpoints, OSFI/PIPEDA |
+| [07-apim.md](./interview-questions/07-apim.md) | APIM policies, versioning, OAuth, circuit breaker |
+| [08-storage-adls-synapse.md](./interview-questions/08-storage-adls-synapse.md) | Blob tiers, ADLS Gen2, Synapse, lakehouse |
+| [09-data-factory-checksums.md](./interview-questions/09-data-factory-checksums.md) | ADF pipelines, checksums, incremental load, CDC |
+| [10-networking.md](./interview-questions/10-networking.md) | Hub-Spoke, NSG, ExpressRoute, BGP, DNS |
+| [11-howto-logic-apps.md](./interview-questions/11-howto-logic-apps.md) | How-to: large files, retries, approvals, scheduling |
+
+---
+
+### 5. [CLAUDE.md — Architect Context](./CLAUDE.md)
 Living reference file used as context for AI-assisted architecture work.  
 Contains core patterns, use-case templates, troubleshooting playbooks, and interview Q&A  
 for Cloud, AI, Data, Networking, AKS, and Migration across enterprise scales.
@@ -108,9 +128,22 @@ AzureArchitecture/
 ├── CLAUDE.md                                            ← architect context + patterns
 ├── UnstructuredData-Migration-RAG-AgenticAI.md          ← migration + RAG + Agentic AI design
 ├── TechStack-Comparison-DataMigration-RAG-AgenticAI.md  ← Azure Native vs OSS comparison
-└── Interview-SystemDesign-10UseCases.md                 ← 10 use cases, deep-dive Q&A
+├── Interview-SystemDesign-10UseCases.md                 ← 10 use cases, deep-dive Q&A
+└── interview-questions/                                 ← interview question bank (B/I/A levels)
+    ├── README.md                                        ← navigation index
+    ├── 01-fundamentals.md                               ← beginner: core concepts
+    ├── 02-migration.md                                  ← migration patterns
+    ├── 03-databases.md                                  ← SQL, CosmosDB, Redis
+    ├── 04-scalability.md                                ← autoscale, KEDA, caching
+    ├── 05-disaster-recovery.md                          ← RTO/RPO, failover
+    ├── 06-security-zero-trust.md                        ← Zero Trust, OSFI, PIPEDA
+    ├── 07-apim.md                                       ← API Management
+    ├── 08-storage-adls-synapse.md                       ← storage, lakehouse, Synapse
+    ├── 09-data-factory-checksums.md                     ← ADF, checksums, CDC
+    ├── 10-networking.md                                 ← Hub-Spoke, ExpressRoute, DNS
+    └── 11-howto-logic-apps.md                           ← Logic Apps how-to guides
 ```
 
 ---
 
-*Last updated: 2026-05-20*
+*Last updated: 2026-05-21*

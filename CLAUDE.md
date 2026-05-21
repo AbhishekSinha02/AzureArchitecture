@@ -671,4 +671,82 @@ Ports to remember:
 
 ---
 
+## 14. DOCUMENTATION & .MD FILE CREATION STANDARD
+
+> This pattern is **mandatory** for all .md files created in this project —  
+> interview prep, how-to guides, scenario playbooks, architecture docs.  
+> Confirmed and validated by user on AzureNetworkingHowToTopics (May 2026).
+
+### 14.1 Per-Question Structure (always in this order)
+
+```
+1. Question number     : ## Q1. (never skip numbering)
+2. Scenario framing    : "Scenario: [concrete real-world situation]" — never abstract
+3. ASCII diagram       : topology / before-after / flow — whenever spatial relationships exist
+4. Bullet-point answer : never long prose; each bullet = one complete thought
+5. Bold key services   : **Azure Firewall**, **Private Endpoint**, **KEDA** etc.
+6. Code block          : runnable CLI / PowerShell / KQL / YAML / HCL — not pseudocode
+7. Output annotation   : # Expected: ... and # Wrong: ... comments inside code blocks
+8. ⚠️ Gotcha           : the one thing that breaks this in production (one sentence)
+9. 💡 Deep dive hint   : one-liner naming the follow-up thread topic
+```
+
+### 14.2 ASCII Diagram Rules
+
+```
+Use these characters: ─ │ ┌ ┐ └ ┘ ├ ┤ ┬ ┴ ┼ ▼ ► ◄ ←
+Always show BEFORE and AFTER when the question involves a change
+Label IPs, service names, and CIDRs directly on the diagram — no legend needed
+Flow diagrams use arrows to show direction of traffic
+```
+
+### 14.3 File & Folder Organisation
+
+```
+- README.md in every folder with navigation table: # | File | What's inside
+- Files numbered: 01-topic.md, 02-topic.md (not by level — levels live inside each file)
+- Level indicator at top of file: 🟢 Beginner → 🟡 Intermediate → 🔴 Advanced
+- Section dividers (---) between every question
+- Opening italicised quote capturing the topic's essence
+```
+
+### 14.4 Tables
+
+```
+- Use tables for: service comparisons, tier comparisons, rule lists, decision matrices
+- Always include a "Use case" or "When to use" column
+- Column headers ≤ 3 words
+```
+
+### 14.5 Code Blocks
+
+```
+- Language tag always present: bash, powershell, kusto, yaml, hcl, json, python
+- Inline comments explain WHY, not WHAT
+- Use \ line continuation for long commands
+- Show expected output as a comment when the output is diagnostic
+```
+
+### 14.6 Tone
+
+```
+- Wikipedia-meets-practitioner: factual, confident, no fluff
+- Short sentences in bullets — each bullet is one complete thought
+- Lead with the insight, not the definition
+- Questions are scenario-based and numbered — not abstract definitions
+```
+
+### 14.7 What NOT to do
+
+```
+- ❌ No long prose paragraphs as the main answer body
+- ❌ No question without a number
+- ❌ No answer without at least one code block (for technical topics)
+- ❌ No diagram-less answer when the topic involves topology or flow
+- ❌ No abstract questions ("What is X?") without a scenario framing it
+- ❌ No trailing summary after delivering work — user reads the output directly
+```
+
+---
+
 *Last updated: May 2026 | Next: Add GenAI agent patterns, ADF CDC deep-dive, AWS EKS vs AKS comparison*
